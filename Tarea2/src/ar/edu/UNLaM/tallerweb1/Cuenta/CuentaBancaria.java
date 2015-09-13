@@ -25,8 +25,10 @@ public class CuentaBancaria {
 	public boolean extraer( double monto){
 		
 		if (puedoExtraer(monto)){
-			
-			this.saldo= monto-this.saldo;
+		
+		// Te corrijo la cuenta porque el resultado siempre da negativo 
+		// this.saldo= monto-this.saldo;
+			this.saldo= this.saldo - monto;
 			return true;
 		}
 			
